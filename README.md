@@ -2,11 +2,15 @@
 CPSC 362-07 Group Project
 
 ## Members: 
-Bradley Diep
-John Dinh
-Lisa hong
-Diane Le
-Parker Stephenson
+Bradley Diep - bdippin12@csu.fullerton.edu
+
+John Dinh - johndinh391@csu.fullerton.edu
+
+Lisa Hong - lisa-hong@csu.fullerton.edu
+
+Diane Le - dianeletrinh@csu.fullerton.edu
+
+Parker Stephenson - parkerstephenson@csu.fullerton.edu
 
 ## Description
 Want to manage your diet? Hungry but don't know what to eat?
