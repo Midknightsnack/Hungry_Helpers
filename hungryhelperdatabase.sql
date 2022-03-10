@@ -1,28 +1,21 @@
 USE hungryhelpers;
-CREATE TABLE Recipes (
+CREATE TABLE Recipe (
   RecipeID     BIGINT UNSIGNED NOT NULL,
-  Type         ENUM('Recipe'),
-  SellPrice    DECIMAL(6,2),
-  Date         DATE,
-  Instructions TEXT,
-  PRIMARY KEY (RecipeID),
-  FOREIGN KEY (RecipeID, Type) REFERENCES RecipeItems (ItemID, Type)
+  RecipeName         VARCHAR(50),
+  RecipePrepTimeMins	INT,
+  RecipeCookTimeMins	INT,
+  RecipeCals		INT,
+  RecipeSkillLevel	VARCHAR(15),
+  RecipePicture 	BLOB,
+  CuisineType	VARCHAR(40),
+  DietType		VARCHAR(50),
+  RecipeMealOfDay 	VARCHAR(15),
+  PRIMARY KEY (RecipeID)
   );
-  
-  CREATE TABLE Ingredients (
-  IngredientID BIGINT UNSIGNED NOT NULL,
-  Type         ENUM('Ingredient'),
-  IngredientDescription VARCHAR(255),
-  CostPrice    DECIMAL(6,2),
-  PRIMARY KEY (IngredientID),
-  FOREIGN KEY (IngredientID, Type) REFERENCES RecipeItems (ItemID, Type)
-);
 
-CREATE TABLE RecipeItems (
-  ItemID       SERIAL,
-  Type         ENUM('Ingredient', 'Recipe'),
-  Name         VARCHAR(255) NOT NULL,
-  ItemDescription VARCHAR(255),
-  Quantity     FLOAT NOT NULL,
-  INDEX (ItemID, Type)
+  CREATE TABLE Ingredients (
+  RecipeIngredientID BIGINT UNSIGNED NOT NULL,
+  RecipeID			BIGINT UNSIGNED NOT NULL,
+  PRIMARY KEY (RecipeIngredientID),
+  FOREIGN KEY (RecipeID) REFERENCES Recipe(RecipeID)
 );
