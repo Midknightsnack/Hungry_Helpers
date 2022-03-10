@@ -41,8 +41,10 @@ CREATE TABLE Ingredient (
   INSERT INTO Recipe (RecipeName)
   VALUES ('Fish and Rice');
   
-  INSERT INTO Recipe (RecipeName)
-  VALUES ('Cheese'), ('Mayo');
-  
-  SELECT * FROM Recipe;
-  
+SELECT * FROM Recipe;
+ 
+INSERT INTO RecipeIngredients (RecipeID, IngredientAmount)
+VALUES (1, '1 pound'),
+		    (1, '2 cups');
+        
+SELECT * FROM RecipeIngredients;
