@@ -29,21 +29,31 @@ li {
     display: flex;
     justify-content: space-between; /*can change to center*/
     background-color: #FFF8B5;
-    padding: 10px;
+    padding: 20px; /*can change padding to have space for fork and spoon*/
 }
   
 /* Month indicator */
 .selected-month-header {
-    font-size: 30px;
+    font-size: 50px;
     font-weight: 600;
 }
 
 /* Month selectors positioning */
-.month-header-selectors {
+/* .month-header-selectors {
     display: flex;
     align-items: center;
     justify-content: space-between;
     width: 80px;
+} */
+
+.previous-month{
+    position: center;
+    font-size: 50px;
+}
+
+.next-month{
+    position: center;
+    font-size: 50px;
 }
   
 .month-header-selectors > * {
