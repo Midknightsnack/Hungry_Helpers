@@ -48,3 +48,13 @@ VALUES (1, '1 pound'),
 		    (1, '2 cups');
         
 SELECT * FROM RecipeIngredients;
+
+INSERT INTO Recipe (RecipePrepTimeMins,RecipeCookTimeMins,RecipeCals,RecipeCarbs,RecipeProtein,RecipeFats,RecipeSkillLevel)
+VALUES (20),
+       (20),
+       (200),
+       (25),
+       (15),
+       (12),
+       ('Medium');
+
