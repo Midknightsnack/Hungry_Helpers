@@ -1,0 +1,121 @@
+body {
+  font-family: sans-serif;
+  font-weight: 100;
+  background-color: #FFF8B5;
+  --grey-100: #e4e9f0;
+  --grey-200: #cfd7e3;
+  --grey-300: #b5c0cd;
+  --blue: #0066eb;
+  --grid-gap: 1px;
+  --day-label-size: 20px;
+}
+
+ol,
+li {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+/* Color of the day cell borders */
+.month {
+  position: relative;
+  background-color: var(--grey-200);
+  border: solid 1px var(--grey-200);
+}
+
+/* Month indicator and selectors positioning */
+.month-header {
+  display: flex;
+  justify-content: space-between;
+  background-color: #FFF8B5;
+  padding: 10px;
+}
+
+/* Month indicator */
+.selected-month-header {
+  font-size: 45px;
+  font-weight: 600;
+}
+
+.previous-month{
+  position: center;
+  font-size: 50px;
+}
+
+.next-month{
+  position: center;
+  font-size: 50px;
+}
+
+.calendar-month-header-selectors > * {
+  cursor: pointer;
+}
+
+.day-of-week {
+  color: var(--blue);
+  font-size: 18px;
+  background-color: #fff;
+  padding-bottom: 5px;
+  padding-top: 10px;
+}
+
+/* 7 columns for weekdays and days cells */
+.day-of-week,
+.days-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+}
+
+/* Position the weekday label within the cell */
+.day-of-week > * {
+  text-align: center;
+  padding-right: 5px;
+}
+
+/* Show border between the days */
+.days-grid {
+  height: 100%;
+  position: relative;
+  grid-column-gap: var(--grid-gap);
+  grid-row-gap: var(--grid-gap);
+  border-top: solid 1px var(--grey-200);
+}
+
+.calendar-day {
+  position: relative;
+  min-height: 100px;
+  font-size: 16px;
+  background-color: #fff;
+  color: var(--blue);
+  padding: 5px;
+}
+
+/* Position the day label within the day cell */
+.calendar-day > span {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  right: 2px;
+  width: var(--day-label-size);
+  height: var(--day-label-size);
+}
+
+.calendar-day--not-current {
+  background-color: var(--grey-100);
+  color: var(--grey-300);
+}
+
+.calendar-day--today {
+  padding-top: 4px;
+}
+
+.calendar-day--today > span {
+  color: #fff;
+  border-radius: 9999px;
+  background-color: var(--blue);
+}
+
+
+/*# sourceMappingURL=/calendar.d12b59bf.css.map */
