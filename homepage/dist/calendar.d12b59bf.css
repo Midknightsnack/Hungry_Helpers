@@ -91,6 +91,10 @@ li {
   padding: 5px;
 }
 
+.calendar-day:hover{
+  background-color: rgb(169, 228, 252);
+}
+
 /* Position the day label within the day cell */
 .calendar-day > span {
   display: flex;
