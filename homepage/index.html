@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+    <!-- run the program by doing npm start in the terminal -->
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hungry Helpers</title>
+    <!--Adding Favicon-->
+    <link rel="shortcut icon" href="images/logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="calendar/styles.css">
+</head>
+
+<body>
+	<div id="app"></div>
+	<script src="calendar/index.js">
+	</script>
+
+
+<button id="myBtn">Pop Up</button>
+<!-- The Modal -->
+<div id="myModal" class="modal">
+  <!-- Modal content -->
+  <div class="modal-content">
+    <div class="modal-header">
+      <span class="close">&times;</span>
+      <h2>Food Description</h2>
+    </div>
+    <div class="modal-body">
+      <p>Input Food</p>
+    </div>
+  </div>
+
+</div>
+
+<script>
+
+var modal = document.getElementById("myModal");
+var btn = document.getElementById("myBtn");
+var span = document.getElementsByClassName("close")[0];
+
+btn.onclick = function() {
+  modal.style.display = "block";
+}
+
+span.onclick = function() {
+  modal.style.display = "none";
+}
+
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+</script>
+
+</body>
+</html>
