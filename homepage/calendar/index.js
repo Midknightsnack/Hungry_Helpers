@@ -32,12 +32,12 @@ document.getElementById("app").innerHTML = `
   <ol
     id="days-of-week"
     class="day-of-week"
-  /></ol>
+  >
+  </ol>
 
   <ol
-    id="calendar-days"
-    class="days-grid"
-  >
+    <div id="calendar-days" class="days-grid" onclick="myPopup()">
+    </div>
   </ol>
 </div>
 `;

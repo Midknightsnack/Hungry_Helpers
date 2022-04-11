@@ -39,11 +39,13 @@ li {
 }
 
 .previous-month{
+  cursor: pointer;
   position: center;
   font-size: 50px;
 }
 
 .next-month{
+  cursor: pointer;
   position: center;
   font-size: 50px;
 }
@@ -84,6 +86,7 @@ li {
 
 .calendar-day {
   position: relative;
+  cursor: pointer;
   min-height: 100px;
   font-size: 16px;
   background-color: #fff;
@@ -121,5 +124,52 @@ li {
   background-color: var(--blue);
 }
 
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+  position: relative;
+  background-color: #fefefe;
+  margin: auto;
+  padding: 0;
+  border: 1px solid #888;
+  height: 80%;
+  width: 80%;
+}
+
+/* The Close Button */
+.close {
+  color: white;
+  float: right;
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.modal-header {
+  padding: 2px 16px;
+  background-color: #5cb85c;
+  color: white;
+}
+
+.modal-body {padding: 2px 16px;}
 
 /*# sourceMappingURL=/calendar.d12b59bf.css.map */
