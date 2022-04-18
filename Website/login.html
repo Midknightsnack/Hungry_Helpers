@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Orelega+One&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet"/>
+    
+    <link rel="stylesheet" href="login.css"/>
+
+    <title>Hungry Helpers</title>
+  </head>
+  <body>
+
+      <!-- This is for the navigation menu -->
+      <div class="nav-container">
+          <div class="wrapper">
+              <nav>
+                  <div class="logo">
+                      <img src="images/HH-Logo.svg" class="logo-image">
+                  </div>
+
+                  <ul class="nav-items">
+                      <li>
+                          <a href="#">Home</a>
+                      </li>
+
+                      <li>
+                          <a href="#">About</a>
+                      </li>
+
+                      <li>
+                          <a href="#">Recipes</a>
+                      </li>
+
+                      <li>
+                          <a href="#">Calendar</a>
+                      </li>
+
+                      <li>
+                          <a href="#">Contact Us</a>
+                      </li>
+
+                      <li>
+                          <a class="nav-button-container" href=#>
+                              <img class="login.html" src="images/Log-Sign-Button.svg" alt="">
+                          </a>
+                      </li>
+
+                  </ul>
+              </nav>
+          </div>
+      </div>
+
+    <!--Login Form-->
+      <div class="login-container">
+        <div class="login-container-vertical">
+            <div>
+                <h2 id="login-header">Welcome Back!</h2>
+            </div>
+            <div class="input-container">
+                <span class="helper-text" id="login-error" data-error="wrong"></span>
+                <input id="email" type="text" placeholder="  email" required>
+                <input id="password" type="password" placeholder="  password" required>
+            </div>
+            <div class="btn-container">
+                <button id="login-btn" onclick="login()">Log In</button>
+                <button id="signup-btn" onclick="redirectSignUp()">Sign Up</button>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+</html>
