@@ -57,16 +57,19 @@
       <div class="login-container">
         <div class="login-container-vertical">
             <div>
-                <h2 id="login-header">Welcome Back!</h2>
+                <h2 id="login-header">Login</h2>
             </div>
             <div class="input-container">
                 <span class="helper-text" id="login-error" data-error="wrong"></span>
-                <input id="email" type="text" placeholder="  email" required>
-                <input id="password" type="password" placeholder="  password" required>
+                <h4 id="email-text">Email</h4>
+                <input id="email" type="text" placeholder="email" required>
+                <h4 id="password-text">Password</h4>
+                <input id="password" type="password" placeholder="password" required>
             </div>
             <div class="btn-container">
-                <button id="login-btn" onclick="login()">Log In</button>
-                <button id="signup-btn" onclick="redirectSignUp()">Sign Up</button>
+                <button id="login-btn" onclick="login()">Login</button>
+                <h4 id="no-existing-acc-msg">Don't have an account?</h4>
+                <button id="signup-btn" onclick="redirectSignUp()">Sign up</button>
             </div>
         </div>
     </div>
