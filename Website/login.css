@@ -74,7 +74,6 @@ nav ul {
     font-family: "Orelega One";
     position: absolute;
 
-    
 }
 
 .login-container-vertical{
@@ -88,6 +87,7 @@ nav ul {
 }
 
 .input-container{
+    background-color: transparent;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -95,28 +95,33 @@ nav ul {
     color: #ECDFEC;
     margin: 30px;
     position: absolute;
-    width: 461.79px;
-    height: 63.35px;
-    left: 228px;
-    top: 200.2px;  
+    width: 500px;
+    height: 120px;
+    left: 200px;
+    top: 350px;  
 }
 
 ::-webkit-input-placeholder{
-    color: black;
+    color: #00000079;   
 }
 
 #login-header{
-    display: flex;
-    justify-content: center;
+    letter-spacing: 2px;
+    position: absolute;
+    left: 450px;
+    top: 100px;
+    background-color: transparent;
     color: #492777;
+    font-size: 50px;
 }
 
 .btn-container{
+    background-color: transparent;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    margin: 30px;
+    margin: 50px;
     position: absolute;
     width: 461.79px;
     height: 43.22px;
@@ -124,30 +129,51 @@ nav ul {
     top: 500.67px;
 }
 
+#email-text {
+    position: absolute;
+    left: 3px;
+    top: -10px;
+    color:#492777;
+    background-color: transparent;
+}
+
 #email{
+    background-color: transparent;
     order: 1;
     display: flex;
-    justify-content: center;
+    justify-content: left;
     align-items: center;
     flex-direction: column;
-
+    background-color: transparent;
+    color: #492777;
     font-family: "Orelega One";
-    border-radius: 4px;
-    height: 250px;
-    width: 350px;
+    border-radius: 10px;
+
+    height: 300px;
+    width: 500px;
     margin: 10px;
 }
 
-#password{
+#password-text {
+    position: absolute;
+    left: 3px;
+    top: 50px;
+    color:#492777;
+    background-color: transparent;
+}
+
+#password {
     order: 2;
     display: flex;
-    justify-content: center;
+    justify-content: left;
     align-items: center;
     flex-direction: column;
+    color: #492777;
+    background-color: transparent;
     font-family: "Orelega One";
-    border-radius: 4px;
-    height: 250px;
-    width: 350px;
+    border-radius: 10px;
+    width: 500px;
+    height: 300px;
     margin: 10px;
 }
 
@@ -191,4 +217,14 @@ nav ul {
     outline: none !important;
     border-color: #ffffff;
     box-shadow: 0 0 10px #ffffff;
+}
+
+#no-existing-acc-msg {
+background: #ECDFEC;
+text-align: center;
+position: center;
+width: 500px;
+height: 20.61px;
+left: 100px;
+top: 100x;
 }
