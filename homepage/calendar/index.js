@@ -36,11 +36,50 @@ document.getElementById("app").innerHTML = `
   </ol>
 
   <ol
-    <div id="calendar-days" class="days-grid" onclick="myPopup()">
+    <div 
+      id="calendar-days" 
+      class="days-grid" 
+    >
     </div>
   </ol>
 </div>
+
+<!-- The Modal -->
+<div id="myModal" class="modal">
+  <!-- Modal content -->
+  <div class="modal-content">
+    <div class="modal-header">
+      <span class="close">&times;</span>
+      <h2>Food Description</h2>
+    </div>
+    <div class="modal-body">
+      <p>Input Food</p>
+    </div>
+  </div>
+
+</div>
 `;
+
+openModal();
+function openModal(){
+  var modal = document.getElementById("myModal");
+  var span = document.getElementsByClassName("close")[0];
+  document
+    .getElementById("calendar-days")
+    .addEventListener("click", function () {
+        modal.style.display = "block";
+    });
+
+    span.onclick = function() {
+      modal.style.display = "none";
+    }
+
+    window.onclick = function(event) {
+      if (event.target == modal) {
+        modal.style.display = "none";
+      }
+    }
+}
 
 const WEEKDAYS = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
 const TODAY = dayjs().format("YYYY-MM-DD");
