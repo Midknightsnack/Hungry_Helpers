@@ -44,16 +44,80 @@ document.getElementById("app").innerHTML = `
   </ol>
 </div>
 
-<!-- The Modal -->
 <div id="myModal" class="modal">
-  <!-- Modal content -->
   <div class="modal-content">
     <div class="modal-header">
       <span class="close">&times;</span>
-      <h2>Food Description</h2>
+      <h2>Meal Plan for the Day</h2>
     </div>
+
     <div class="modal-body">
-      <p>Input Food</p>
+      <form>
+        <br> Input Meal: <br><input type="text" name="food"> <br>
+        <br> Set Time: <br><br> 
+        <label for="hours">Hour:</label>
+        <select name="hours" id="hours">
+          <option value="0">0</option>
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+          <option value="6">6</option>
+          <option value="7">7</option>
+          <option value="8">8</option>
+          <option value="9">9</option>
+          <option value="10">10</option>
+          <option value="11">11</option>
+          <option value="12">12</option>
+        </select><br>
+
+        <label for="minutes"> Minutes:</label>
+        <select name="minutes" id="minutes">
+          <option value="00">00</option>
+          <option value="05">05</option>
+          <option value="10">10</option>
+          <option value="15">15</option>
+          <option value="20">20</option>
+          <option value="25">25</option>
+          <option value="30">30</option>
+          <option value="35">35</option>
+          <option value="40">40</option>
+          <option value="45">45</option>
+          <option value="50">50</option>
+          <option value="55">55</option>
+        </select><br>
+
+        <label for="tod"> AM/PM:</label>
+        <select name="tod" id="tod">
+          <option value="AM">AM</option>
+          <option value="PM">PM</option>
+        </select><br><br>
+
+        <label for="notification_time"> Be notified (🔔): </label>
+        <select name="notification_time" id="notification_time">
+          <option value="00"> 0 minutes</option>
+          <option value="05"> 5 minutes</option>
+          <option value="10"> 10 minutes</option>
+          <option value="15"> 15 minutes</option>
+          <option value="20"> 20 minutes</option>
+          <option value="25"> 25 minutes</option>
+          <option value="30"> 30 minutes</option>
+          <option value="35"> 35 minutes</option>
+          <option value="40"> 40 minutes</option>
+          <option value="45"> 45 minutes</option>
+          <option value="50"> 50 minutes</option>
+          <option value="55"> 55 minutes</option>
+          <option value="60"> 1 hour</option>
+        </select> <br> <br>
+
+        <input type="reset" id="cancel" value="Reset">
+        <input type="submit" name="submit_button" value="Submit">
+
+      </form>
+      <br>
+
+   </form>
     </div>
   </div>
 

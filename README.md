@@ -12,6 +12,8 @@ Diane Le - dianeletrinh@csu.fullerton.edu
 
 Parker Stephenson - parkerstephenson@csu.fullerton.edu
 
+Michael Trinh - michaeltrinh@csu.fullerton.edu
+
 ## Description
 Want to manage your diet? Hungry but don't know what to eat?
 
