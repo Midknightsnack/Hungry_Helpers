@@ -111,13 +111,14 @@ document.getElementById("app").innerHTML = `
           <option value="60"> 1 hour</option>
         </select> <br> <br>
 
-        <input type="reset" id="cancel" value="Reset">
-        <input type="submit" name="submit_button" value="Submit">
+        <button type="reset" value="Reset">Reset</button>
+        <button type="cancel" id="cancel_button">Cancel</button>
+        <button type="submit" value="Submit">Save</button>
 
       </form>
       <br>
 
-   </form>
+    </form>
     </div>
   </div>
 
