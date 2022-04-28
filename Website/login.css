@@ -37,9 +37,14 @@ nav ul {
   top: 64px;    
 }
 
+.login-container  {
+  position: relative;
+  top: -32%; 
+}
+
 html, body {
   display: grid;
-  height: 1190px;  /* might have issues with consistency */
+  height: 1140px;  /* might have issues with consistency */
   width: 100%;
   box-sizing: border-box;
   place-items: center;
