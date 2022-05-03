@@ -54,6 +54,7 @@ document.getElementById("app").innerHTML = `
     <div class="modal-body">
       <form>
         <br> Input Meal: <br><input type="text" name="food"> <br>
+        <button type="button" onclick="window.location.href='../rngrecipes/index.html'">Don't know what to eat, click here!</button>        
         <br> Set Time: <br><br> 
         <label for="hours">Hour:</label>
         <select name="hours" id="hours">
