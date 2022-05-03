@@ -53,9 +53,9 @@ document.getElementById("app").innerHTML = `
 
     <div class="modal-body">
       <form>
-        <br> Input Meal: <br><input type="text" name="food"> <br>
-        <button type="button" onclick="window.location.href='../rngrecipes/index.html'">Don't know what to eat, click here!</button>        
-        <br> Set Time: <br><br> 
+        <br> <b>Input Meal: </b><br><input type="text" name="food"> <br>
+        <a href="../rngrecipes/index.html">Don't know what to eat? Click here!</a>   
+        <br><br> <b>Set Time: </b><br> 
         <label for="hours">Hour:</label>
         <select name="hours" id="hours">
           <option value="0">0</option>
@@ -95,7 +95,7 @@ document.getElementById("app").innerHTML = `
           <option value="PM">PM</option>
         </select><br><br>
 
-        <label for="notification_time"> Be notified (🔔): </label>
+        <label for="notification_time"> <b>Be notified (🔔): </b></label>
         <select name="notification_time" id="notification_time">
           <option value="00"> 0 minutes</option>
           <option value="05"> 5 minutes</option>
