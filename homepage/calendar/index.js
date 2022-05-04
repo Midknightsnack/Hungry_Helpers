@@ -52,8 +52,8 @@ document.getElementById("app").innerHTML = `
     </div>
 
     <div class="modal-body">
-      <form>
-        <br> <b>Input Meal: </b><br><input type="text" name="food"> <br>
+      <form name='popup_food'>
+        <br> <b>Input Meal: </b><br><input type="text" name="food" value='cheese'> <br>
         <a href="../rngrecipes/index.html">Don't know what to eat? Click here!</a>   
         <br><br> <b>Set Time: </b><br> 
         <label for="hours">Hour:</label>
@@ -114,16 +114,17 @@ document.getElementById("app").innerHTML = `
 
         <button type="reset" value="Reset">Reset</button>
         <button type="cancel" id="cancel_button">Cancel</button>
-        <button type="submit" value="Submit">Save</button>
+        <input type="submit" onclick='check(); return false'>
 
       </form>
       <br>
 
-    </form>
     </div>
   </div>
 
 </div>
+<p> Showing Information: </p>
+<p id = 'f1'></p>
 `;
 
 openModal();
@@ -145,6 +146,11 @@ function openModal(){
         modal.style.display = "none";
       }
     }
+}
+
+check();
+function check(){
+  document.getElementById('f1').innerHTML = document.popup_food.food.value;
 }
 
 const WEEKDAYS = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
