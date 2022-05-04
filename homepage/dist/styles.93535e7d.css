@@ -1,7 +1,7 @@
 body {
   font-family: sans-serif;
   font-weight: 100;
-  background-color: #FFF8B5;
+  background-color: #bcb5ff;
   --grey-100: #e4e9f0;
   --grey-200: #cfd7e3;
   --grey-300: #b5c0cd;
@@ -28,20 +28,35 @@ li {
 .month-header {
   display: flex;
   justify-content: space-between;
-  background-color: #FFF8B5;
+  background-color: #bcb5ff;
   padding: 10px;
 }
 
 /* Month indicator */
 .selected-month-header {
-  font-size: 45px;
+  font-size: 80px;
   font-weight: 600;
+  color:rgb(35, 19, 107)
 }
 
 .previous-month{
   cursor: pointer;
   position: center;
   font-size: 50px;
+}
+
+.fork_image{
+  position: center;
+}
+
+.spoon_image{
+  position: center;
+}
+
+.logo_image{
+  position: absolute; 
+  bottom: 0px; 
+  right: 0px;
 }
 
 .next-month{

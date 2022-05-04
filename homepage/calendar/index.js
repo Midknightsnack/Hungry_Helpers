@@ -17,9 +17,21 @@ document.getElementById("app").innerHTML = `
     </div>
     
     <div
+      class = "fork_image"
+    >
+      <img src="../month_images/fork_1.png" alt="Fork" style="width:40px;height:110px;"></img>
+    </div>
+
+    <div
       id="selected-month"
       class="selected-month-header"
     ></div>
+
+    <div
+    class = "spoon_image"
+    >
+      <img src="../month_images/spoon.png" alt="Spoon" style="width:40px;height:110px;"></img>
+    </div>
 
     <div 
       id="next-month-selector"
@@ -125,6 +137,12 @@ document.getElementById("app").innerHTML = `
 </div>
 <p> Showing Information: </p>
 <p id = 'f1'></p>
+
+<div
+  class = "logo_image"
+>
+<img src="../month_images/HH-logo.svg" alt="Logo" style="width:100px;height:100px;"></img>
+</div>
 `;
 
 openModal();
