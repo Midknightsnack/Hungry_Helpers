@@ -65,8 +65,8 @@ document.getElementById("app").innerHTML = `
 
     <div class="modal-body">
       <form name='popup_food'>
-        <br> <b>Input Meal: </b><br><input type="text" name="food" value='cheese'> <br>
-        <a href="../rngrecipes/index.html">Don't know what to eat? Click here!</a>   
+        <br> <b>Input Meal: </b><br><input type="text" name="food" value=''> <br>
+        <a href="../rngrecipes/index.html">Don't know what to eat? Click here!</a> 
         <br><br> <b>Set Time: </b><br> 
         <label for="hours">Hour:</label>
         <select name="hours" id="hours">

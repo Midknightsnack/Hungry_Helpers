@@ -1,42 +1,17 @@
-* {
-    box-sizing: border-box;
+*{
     margin: 0;
-    background-color: #F9ECDF;
-}
-
-body {
-    font-size: 20px;
-}
-
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Orelega One;
+  }
+  
 /* Navigation */
-.nav-container {
-    height: 100px;
-    margin-top: 30px;
-    z-index: 500;
-    position: relative;
-}
-
-.wrapper {
-    width: 1200px;
-    margin: 0 auto;
-}
-
-nav {
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
-    height: 150px;
-}
-
 nav ul {
     display: flex;
 }
 
 .logo {
     position: absolute;
-    width: 100px;
-    height: 113.65px;
-    left: 60px;
     top: 20px;
 }
 
@@ -58,28 +33,32 @@ nav ul {
 
 .nav-button-container {
     position: absolute;
-    width: 187px;
-    height: 35px;
-    left: 1500px;
-    top: 60px;    
+    left: 750%;
+    top: 64px;    
+}
+
+html, body {
+    display: grid;
+    height: 658px;  /* might have issues with consistency */
+    width: 100%;
+    box-sizing: border-box;
+    place-items: center;
+    background: #F9ECDF;
+}
+
+.wrapper {
+  overflow: hidden;
+  background: #ffffff;
+  padding: 30px;
+  border-radius: 5px;
+  box-shadow: 0px 15px 20px rgba(0,0,0,0.1);
 }
   
-.hero-content {
-    position: absolute;
-    height: 82px;
-    left: 40.97%;
-    right: 40.83%;
-    top: calc(50% - 82px/2 - 177px);
-    font-family: 'Orelega One';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 75px;
-    line-height: 82px;
-    display: flex;
-    align-items: center;
+.header-container {
+    padding: 50px;
     text-align: center;
-    letter-spacing: 0.352431px;
     color: #492777;
   }
+
 
 /*# sourceMappingURL=/about.745bede5.css.map */

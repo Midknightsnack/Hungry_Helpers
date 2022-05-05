@@ -1,42 +1,17 @@
-* {
-    box-sizing: border-box;
+*{
     margin: 0;
-    background-color: #F9ECDF;
-}
-
-body {
-    font-size: 20px;
-}
-
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Orelega One;
+  }
+  
 /* Navigation */
-.nav-container {
-    height: 100px;
-    margin-top: 30px;
-    z-index: 500;
-    position: relative;
-}
-
-.wrapper {
-    width: 1200px;
-    margin: 0 auto;
-}
-
-nav {
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
-    height: 150px;
-}
-
 nav ul {
     display: flex;
 }
 
 .logo {
     position: absolute;
-    width: 100px;
-    height: 113.65px;
-    left: 60px;
     top: 20px;
 }
 
@@ -58,12 +33,35 @@ nav ul {
 
 .nav-button-container {
     position: absolute;
-    width: 187px;
-    height: 35px;
-    left: 1500px;
-    top: 60px;    
+    left: 750%;
+    top: 64px;    
+}
+
+html, body {
+    display: grid;
+    height: 770px;  /* might have issues with consistency */
+    width: 100%;
+    box-sizing: border-box;
+    place-items: center;
+    background: #F9ECDF;
+}
+
+.wrapper {
+  overflow: hidden;
+  background: #ffffff;
+  padding: 30px;
+  border-radius: 5px;
+  box-shadow: 0px 15px 20px rgba(0,0,0,0.1);
 }
   
+.header-container {
+    padding: 50px;
+    text-align: center;
+    color: #492777;
+}
+
+
+/*
 .hero-content {
     position: absolute;
     height: 82px;
@@ -111,5 +109,30 @@ input[type="text"] {
     font-style: italic;
     text-align: 50px;
 }
+*/
+
+/* new search bar implementation */
+
+.search {
+	position: absolute;
+    top: 400px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #ffffff;
+    max-width: 600px;
+    width: 100%;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    border-radius: 5px;
+    box-shadow: 0px 15px 20px rgba(0,0,0,0.1);
+}
+
+.search .input {
+    width: 88%;
+    padding: 10px 20px;
+    border: none;
+}
+
 
 /*# sourceMappingURL=/recipes.e10ccd5e.css.map */
