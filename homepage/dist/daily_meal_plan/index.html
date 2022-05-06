@@ -4,7 +4,7 @@
     <meta charset =  "utf-8" />
     <title> 5 Recipes</title>
     <style>
-        .recipe  {
+        .meals  {
             background-color: black;
             color: white;
             padding: 1rem;
@@ -13,9 +13,17 @@
     </style>
   </head>
   <body>
-      <button onclick="fetching();">Daily Meal Plan</button>
-      <div id ="output"></div>
-      <button onclick="window.location.href = '../Website/login.html'"> Return to Login Page</button>
-  </body>
-  <script src="meal_plan.js"></script>
+    <div className="App">
+      <section className="controls">
+         <input
+           type="number"
+           placeholder="Calories (e.g. 2000)"
+           id="calories"
+         />
+         <button onclick="fetching(document.getElementById('calories').value);">Get Daily Meal Plan</button>
+         <div id ="output"></div>
+       </section>
+        </div>
+</body>
+<script type ="text/javascript" src="../daily_meal_plan/daily_plan.js"></script>
 </html>
