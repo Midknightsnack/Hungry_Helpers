@@ -1,16 +1,4 @@
-// function GetCalories()
-// {
-//   <div className="app">
-//           <section className="controls">
-//              <input
-//                type="number"
-//                placeholder="Calories (e.g. 2000)"
-//                id="calories"
-//              />
-//              <button onclick="fetching();">Get Daily Meal Plan</button>
-//            </section>
-//             </div>
-// }
+
 function fetching(calories) {
     fetch('https://api.spoonacular.com/mealplanner/generate?apiKey=de559a9360ca444db609c4915be035ca&timeFrame=day&targetCalories='+calories,)
         .then(response => response.json())

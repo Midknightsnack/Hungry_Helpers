@@ -4,7 +4,7 @@
     <meta charset =  "utf-8" />
     <title> 5 Recipes</title>
     <style>
-        .recipe  {
+        .data  {
             background-color: black;
             color: white;
             padding: 1rem;
@@ -13,9 +13,31 @@
     </style>
   </head>
   <body>
-      <button onclick="fetching();">Meal plan by nutrient</button>
-      <div id ="output"></div>
-      <button onclick="window.location.href = '../Website/login.html'"> Return to Login Page</button>
-  </body>
-  <script src="plan.js"></script>
+    <div className="App">
+      <section className="controls">
+         <input
+           type="number"
+           placeholder="Max Calories"
+           id="calories"
+         />
+         <input
+           type="number"
+           placeholder="Max Carbs"
+           id="carbs"
+         />
+         <input
+           type="number"
+           placeholder="Max Fat"
+           id="fat"
+         />
+         <input
+           type="number"
+           placeholder="Minimum Protein"
+           id="protein"
+         />
+         <button onclick="fetching(document.getElementById('calories').value,document.getElementById('carbs').value,document.getElementById('fat').value,document.getElementById('protein').value);">Get Meals by Nutrient Count</button>
+       </section>
+        </div>
+</body>
+<script type ="text/javascript" src="../nutrient_meal_plan/plan.js"></script>
 </html>
