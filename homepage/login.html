@@ -1,79 +1,130 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://fonts.googleapis.com/css?family=Orelega+One&display=swap" rel="stylesheet" />
-    <link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet"/>
-    
-    <link rel="stylesheet" href="login.css"/>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width" , initial-scale="1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie-edge" />
 
-    <title>Hungry Helpers</title>
-  </head>
-  <body>
+        <link href="https://fonts.googleapis.com/css?family=Orelega+One&display=swap" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet"/>
 
-      <!-- This is for the navigation menu -->
-      <div class="nav-container">
-          <div class="wrapper">
-              <nav>
-                  <div class="logo">
-                      <img src="images/HH-Logo.svg" class="logo-image">
-                  </div>
+        <link rel="stylesheet" href="login.css"/>
 
-                  <ul class="nav-items">
-                      <li>
-                          <a href="index.html">Home</a>
-                      </li>
+        <title>Hungry Helpers</title>
+    </head>
+    <body>
+        <!-- This is for the navigation menu -->
+        <div class="nav-container">
+            <div class="wrapper">
+                <div class="logo">
+                    <img src="images/HH-Logo.svg" class="logo-image">
+                
+                    <a class="nav-button-container" href="login.html">
+                        <img class="login.html" src="images/Log-Sign-Button.svg" alt="">
+                    </a>
 
-                      <li>
-                          <a href="about.html">About</a>
-                      </li>
+                </div>
+                <nav>
+                    <ul class="nav-items">
+                        <li>
+                            <a href="index.html">Home</a>
+                        </li>
 
-                      <li>
-                          <a href="recipes.html">Recipes</a>
-                      </li>
+                        <li>
+                            <a href="about.html">About</a>
+                        </li>
 
-                      <li>
-                          <a href="../homepage/calendar/calendar.html">Calendar</a>
-                      </li>
+                        <li>
+                            <a href="recipes.html">Recipes</a>
+                        </li>
 
-                      <li>
-                          <a href="contact.html">Contact Us</a>
-                      </li>
+                        <li>
+                            <a href="../homepage/calendar/calendar.html">Calendar</a>
+                        </li>
 
-                      <li>
-                          <a class="nav-button-container" href=#>
-                              <img class="login.html" src="images/Log-Sign-Button.svg" alt="">
-                          </a>
-                      </li>
-
-                  </ul>
-              </nav>
-          </div>
-      </div>
-
-    <!--Login Form-->
-      <div class="login-container">
-        <div class="login-container-vertical">
-            <div>
-                <h2 id="login-header">Login</h2>
-            </div>
-            <div class="input-container">
-                <span class="helper-text" id="login-error" data-error="wrong"></span>
-                <h4 id="email-text">Email</h4>
-                <input id="email" type="text" placeholder="email" required>
-                <h4 id="password-text">Password</h4>
-                <input id="password" type="password" placeholder="password" required>
-            </div>
-            <div class="btn-container">
-                <button id="login-btn" onclick="login()">Login</button>
-                <h4 id="no-existing-acc-msg">Don't have an account?</h4>
-                <button id="signup-btn" onclick="redirectSignUp()">Sign up</button>
+                        <li>
+                            <a href="contact.html">Contact Us</a>
+                        </li>
+                    </ul>
+                </nav>
             </div>
         </div>
-    </div>
 
-
-</body>
+         <!-- This is the login portal -->
+         <div class="login-container">
+            <div class="wrapper">
+               <div class="title-text">
+                  <div class="title login">
+                     Login Form
+                  </div>
+                  <div class="title signup">
+                     Signup Form
+                  </div>
+               </div>
+               <div class="form-container">
+                  <div class="slide-controls">
+                     <input type="radio" name="slide" id="login" checked>
+                     <input type="radio" name="slide" id="signup">
+                     <label for="login" class="slide login">Login</label>
+                     <label for="signup" class="slide signup">Signup</label>
+                     <div class="slider-tab"></div>
+                  </div>
+                  <div class="form-inner">
+                     <form action="#" class="login">
+                        <div class="field">
+                           <input type="text" placeholder="Email Address" required>
+                        </div>
+                        <div class="field">
+                           <input type="password" placeholder="Password" required>
+                        </div>
+                        <div class="pass-link">
+                           <a href="#">Forgot password?</a>
+                        </div>
+                        <div class="field btn">
+                           <div class="btn-layer"></div>
+                           <input type="submit" value="Login">
+                        </div>
+                        <div class="signup-link">
+                           Not a member? <a href="">Signup now</a>
+                        </div>
+                     </form>
+                     <form action="#" class="signup">
+                        <div class="field">
+                           <input type="text" placeholder="Email Address" required>
+                        </div>
+                        <div class="field">
+                           <input type="password" placeholder="Password" required>
+                        </div>
+                        <div class="field">
+                           <input type="password" placeholder="Confirm password" required>
+                        </div>
+                        <div class="field btn">
+                           <div class="btn-layer"></div>
+                           <input type="submit" value="Signup">
+                        </div>
+                     </form>
+                  </div>
+               </div>
+            </div>
+            <script>
+               const loginText = document.querySelector(".title-text .login");
+               const loginForm = document.querySelector("form.login");
+               const loginBtn = document.querySelector("label.login");
+               const signupBtn = document.querySelector("label.signup");
+               const signupLink = document.querySelector("form .signup-link a");
+               signupBtn.onclick = (()=>{
+               loginForm.style.marginLeft = "-50%";
+               loginText.style.marginLeft = "-50%";
+               });
+               loginBtn.onclick = (()=>{
+               loginForm.style.marginLeft = "0%";
+               loginText.style.marginLeft = "0%";
+               });
+               signupLink.onclick = (()=>{
+               signupBtn.click();
+               return false;
+               });
+            </script>
+         </div>
+    </body>
 </html>

@@ -16,6 +16,7 @@ function fetching() {
                 <p> Servings: ${recipe.servings}</p>
                 <p> Summary: ${recipe.summary}</p>
                 <p> Instructions: ${recipe.instructions}</p>
+                <p> URL: ${recipe.sourceUrl}
             </div>
             `}).join(" ");
         const htmlhld = data.recipes.extendedIngredients
