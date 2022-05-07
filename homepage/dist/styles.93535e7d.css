@@ -42,7 +42,8 @@ li {
 .previous-month{
   cursor: pointer;
   position: center;
-  font-size: 50px;
+  font-size: 100px;
+  color:rgb(35, 19, 107)
 }
 
 .fork_image{
@@ -62,7 +63,8 @@ li {
 .next-month{
   cursor: pointer;
   position: center;
-  font-size: 50px;
+  font-size: 100px;
+  color:rgb(35, 19, 107)
 }
 
 .calendar-month-header-selectors > * {
