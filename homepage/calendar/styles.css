@@ -55,7 +55,7 @@ li {
 }
 
 .logo_image{
-  position: absolute; 
+  position: fixed; 
   bottom: 0px; 
   right: 0px;
 }
@@ -158,12 +158,40 @@ li {
 /* Modal Content */
 .modal-content {
   position: relative;
-  background-color: #fefefe;
+  background-color: #d1e1ff;
   margin: auto;
   padding: 0;
   border: 1px solid #888;
   height: 50%;
   width: 20%;
+}
+
+/*reset button*/
+.button1{
+  display:inline-block;
+  padding:0.3em 1.2em;
+  margin:0 0.3em 0.3em 0;
+  border-radius: 4px;
+  text-decoration:none;
+  font-family:'Roboto',sans-serif;
+  font-weight:700;
+  color:#ffffff;
+  background-color:#f1544e;
+  text-align:center;
+}
+
+/*reset button*/
+.button2{
+  display:inline-block;
+  padding:0.3em 1.2em;
+  margin:0 0.3em 0.3em 0;
+  border-radius: 4px;
+  text-decoration:none;
+  font-family:'Roboto',sans-serif;
+  font-weight:700;
+  color:#ffffff;
+  background-color:#23c962;
+  text-align:center;
 }
 
 /* The Close Button */
@@ -183,8 +211,22 @@ li {
 
 .modal-header {
   padding: 2px 16px;
-  background-color: #5cb85c;
+  background-color: rgb(20, 49, 145);
   color: white;
 }
 
 .modal-body {padding: 2px 16px;}
+
+/* Meal Display */
+.meal-display{
+  padding: 10px;
+  background-color: rgb(35, 19, 107);
+  color: rgb(156, 173, 250);
+  font-size: 20px;
+  font-family: sans-serif;
+}
+
+.meal-display-content {
+  background-color: #fefefe;
+  padding: 5px;
+}

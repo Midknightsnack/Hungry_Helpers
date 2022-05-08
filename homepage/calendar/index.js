@@ -64,26 +64,26 @@ document.getElementById("app").innerHTML = `
     </div>
 
     <div class="modal-body">
-      <form name='popup_food'>
-        <br> <b>Input Meal: </b><br><input type="text" id="food" value='(Blank)'> <br>
+      <form name='popup_food' onsubmit="return false">
+        <br> <b>Input Meal: </b><br><input type="text" id="food" value="(Blank)"> <br>
         <a href="../meal_options/index.html">Don't know what to eat? Click here!</a> 
 
-        <br><br> <b>Set Time: </b><br> 
-        Hours: 
+        <br><br> <b>Set Meal Time: </b><br> 
+        Hour: 
         <select name="hours" id="hours">
-          <option value="Hours: 0">0</option>
-          <option value="Hours: 1">1</option>
-          <option value="Hours: 2">2</option>
-          <option value="Hours: 3">3</option>
-          <option value="Hours: 4">4</option>
-          <option value="Hours: 5">5</option>
-          <option value="Hours: 6">6</option>
-          <option value="Hours: 7">7</option>
-          <option value="Hours: 8">8</option>
-          <option value="Hours: 9">9</option>
-          <option value="Hours: 10">10</option>
-          <option value="Hours: 11">11</option>
-          <option value="Hours: 12">12</option>
+          <option value="Hour: 0">0</option>
+          <option value="Hour: 1">1</option>
+          <option value="Hour: 2">2</option>
+          <option value="Hour: 3">3</option>
+          <option value="Hour: 4">4</option>
+          <option value="Hour: 5">5</option>
+          <option value="Hour: 6">6</option>
+          <option value="Hour: 7">7</option>
+          <option value="Hour: 8">8</option>
+          <option value="Hour: 9">9</option>
+          <option value="Hour: 10">10</option>
+          <option value="Hour: 11">11</option>
+          <option value="Hour: 12">12</option>
         </select><br>
 
         Minutes:
@@ -125,23 +125,24 @@ document.getElementById("app").innerHTML = `
           <option value="Notification Time: 1 hour before"> 1 hour</option>
         </select> <br> <br>
 
-        <button type="reset" value="Reset">Reset</button>
-        <button type="cancel" id="cancel_button">Cancel</button>
-        <input type="submit" id="submit" onclick='check(); return false'>
+        <button type="reset" value="Reset" class="button1">Reset</button>
+        <input type="submit" id="submit" class="button2" onclick='check();'>
 
       </form>
 
     </div>
   </div>
 
-</div>
+</div> <br><br>
 
-Meal Plan for the Day: 
-<p id='f1'></p>
-<p id='f2'></p>
-<p id='f3'></p>
-<p id='f4'></p>
-<p id='f5'></p>
+<div class="meal-display"> <b>Meal Plan for the Day:</b></div>
+<div class="meal-display-content">
+  <p id='f1'></p>
+  <div id='f2'></div>
+  <div id='f3'></div>
+  <div id='f4'></div>
+  <p id='f5'></p>
+</div>
 
 <div
   class = "logo_image"
@@ -173,47 +174,40 @@ function openModal(){
 
 check();
 function check(){
-  // document.getElementById('f1').innerHTML = document.popup_food.food.value;
-  // document.getElementById('f2').innerHTML = document.popup_food.hours.value;
-  // document.getElementById('f3').innerHTML = document.popup_food.minutes.value;
-  // document.getElementById('f4').innerHTML = document.popup_food.tod.value;
-  // document.getElementById('f5').innerHTML = document.popup_food.notification_time.value;
-
-  $(document).ready(function(){
+  document.getElementById('f1').innerHTML =  $(document).ready(function(){
     $('#submit').click(function(){
-        var databack = $('#myModal #food').val();
-        $('#f1').html(databack);
+      var databack = $('#myModal #food').val();
+      $('#f1').html(databack);
     }); 
   });
 
-  $(document).ready(function(){
+  document.getElementById('f2').innerHTML =  $(document).ready(function(){
     $('#submit').click(function(){
-        var databack = $('#myModal #hours').val();
-        $('#f2').html(databack);
+      var databack = $('#myModal #hours').val();
+      $('#f2').html(databack);
     }); 
   });
 
-  $(document).ready(function(){
+  document.getElementById('f3').innerHTML =  $(document).ready(function(){
     $('#submit').click(function(){
-        var databack = $('#myModal #minutes').val();
-        $('#f3').html(databack);
+      var databack = $('#myModal #minutes').val();
+      $('#f3').html(databack);
+    }); 
+  });
+  
+  document.getElementById('f4').innerHTML =  $(document).ready(function(){
+    $('#submit').click(function(){
+      var databack = $('#myModal #tod').val();
+      $('#f4').html(databack);
     }); 
   });
 
-  $(document).ready(function(){
+  document.getElementById('f5').innerHTML =  $(document).ready(function(){
     $('#submit').click(function(){
-        var databack = $('#myModal #tod').val();
-        $('#f4').html(databack);
+      var databack = $('#myModal #notification_time').val();
+      $('#f5').html(databack);
     }); 
   });
-
-  $(document).ready(function(){
-    $('#submit').click(function(){
-        var databack = $('#myModal #notification_time').val();
-        $('#f5').html(databack);
-    }); 
-  });
-
 }
 
 const WEEKDAYS = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
