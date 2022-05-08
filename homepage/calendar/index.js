@@ -60,83 +60,88 @@ document.getElementById("app").innerHTML = `
   <div class="modal-content">
     <div class="modal-header">
       <span class="close">&times;</span>
-      <h2>Meal Plan for the Day</h2>
+      <h2>Set Meal Plan for the Day</h2>
     </div>
 
     <div class="modal-body">
       <form name='popup_food'>
-        <br> <b>Input Meal: </b><br><input type="text" name="food" value=''> <br>
+        <br> <b>Input Meal: </b><br><input type="text" id="food" value='(Blank)'> <br>
         <a href="../meal_options/index.html">Don't know what to eat? Click here!</a> 
+
         <br><br> <b>Set Time: </b><br> 
-        <label for="hours">Hour:</label>
+        Hours: 
         <select name="hours" id="hours">
-          <option value="0">0</option>
-          <option value="1">1</option>
-          <option value="2">2</option>
-          <option value="3">3</option>
-          <option value="4">4</option>
-          <option value="5">5</option>
-          <option value="6">6</option>
-          <option value="7">7</option>
-          <option value="8">8</option>
-          <option value="9">9</option>
-          <option value="10">10</option>
-          <option value="11">11</option>
-          <option value="12">12</option>
+          <option value="Hours: 0">0</option>
+          <option value="Hours: 1">1</option>
+          <option value="Hours: 2">2</option>
+          <option value="Hours: 3">3</option>
+          <option value="Hours: 4">4</option>
+          <option value="Hours: 5">5</option>
+          <option value="Hours: 6">6</option>
+          <option value="Hours: 7">7</option>
+          <option value="Hours: 8">8</option>
+          <option value="Hours: 9">9</option>
+          <option value="Hours: 10">10</option>
+          <option value="Hours: 11">11</option>
+          <option value="Hours: 12">12</option>
         </select><br>
 
-        <label for="minutes"> Minutes:</label>
+        Minutes:
         <select name="minutes" id="minutes">
-          <option value="00">00</option>
-          <option value="05">05</option>
-          <option value="10">10</option>
-          <option value="15">15</option>
-          <option value="20">20</option>
-          <option value="25">25</option>
-          <option value="30">30</option>
-          <option value="35">35</option>
-          <option value="40">40</option>
-          <option value="45">45</option>
-          <option value="50">50</option>
-          <option value="55">55</option>
+          <option value="Minutes: 00">00</option>
+          <option value="Minutes: 05">05</option>
+          <option value="Minutes: 10">10</option>
+          <option value="Minutes: 15">15</option>
+          <option value="Minutes: 20">20</option>
+          <option value="Minutes: 25">25</option>
+          <option value="Minutes: 30">30</option>
+          <option value="Minutes: 35">35</option>
+          <option value="Minutes: 40">40</option>
+          <option value="Minutes: 45">45</option>
+          <option value="Minutes: 50">50</option>
+          <option value="Minutes: 55">55</option>
         </select><br>
 
-        <label for="tod"> AM/PM:</label>
+        AM/PM:
         <select name="tod" id="tod">
-          <option value="AM">AM</option>
-          <option value="PM">PM</option>
+          <option value="Time of Day: AM">AM</option>
+          <option value="Time of Day: PM">PM</option>
         </select><br><br>
 
-        <label for="notification_time"> <b>Be notified (🔔): </b></label>
+        <b>Be notified (🔔): </b>
         <select name="notification_time" id="notification_time">
-          <option value="00"> 0 minutes</option>
-          <option value="05"> 5 minutes</option>
-          <option value="10"> 10 minutes</option>
-          <option value="15"> 15 minutes</option>
-          <option value="20"> 20 minutes</option>
-          <option value="25"> 25 minutes</option>
-          <option value="30"> 30 minutes</option>
-          <option value="35"> 35 minutes</option>
-          <option value="40"> 40 minutes</option>
-          <option value="45"> 45 minutes</option>
-          <option value="50"> 50 minutes</option>
-          <option value="55"> 55 minutes</option>
-          <option value="60"> 1 hour</option>
+          <option value="Notification Time: None"> 0 minutes</option>
+          <option value="Notification Time: 5 minutes before"> 5 minutes</option>
+          <option value="Notification Time: 10 minutes before"> 10 minutes</option>
+          <option value="Notification Time: 15 minutes before"> 15 minutes</option>
+          <option value="Notification Time: 20 minutes before"> 20 minutes</option>
+          <option value="Notification Time: 25 minutes before"> 25 minutes</option>
+          <option value="Notification Time: 30 minutes before"> 30 minutes</option>
+          <option value="Notification Time: 35 minutes before"> 35 minutes</option>
+          <option value="Notification Time: 40 minutes before"> 40 minutes</option>
+          <option value="Notification Time: 45 minutes before"> 45 minutes</option>
+          <option value="Notification Time: 50 minutes before"> 50 minutes</option>
+          <option value="Notification Time: 55 minutes before"> 55 minutes</option>
+          <option value="Notification Time: 1 hour before"> 1 hour</option>
         </select> <br> <br>
 
         <button type="reset" value="Reset">Reset</button>
         <button type="cancel" id="cancel_button">Cancel</button>
-        <input type="submit" onclick='check(); return false'>
+        <input type="submit" id="submit" onclick='check(); return false'>
 
       </form>
-      <br>
 
     </div>
   </div>
 
 </div>
-<p> Showing Information: </p>
-<p id = 'f1'></p>
+
+Meal Plan for the Day: 
+<p id='f1'></p>
+<p id='f2'></p>
+<p id='f3'></p>
+<p id='f4'></p>
+<p id='f5'></p>
 
 <div
   class = "logo_image"
@@ -168,7 +173,47 @@ function openModal(){
 
 check();
 function check(){
-  document.getElementById('f1').innerHTML = document.popup_food.food.value;
+  // document.getElementById('f1').innerHTML = document.popup_food.food.value;
+  // document.getElementById('f2').innerHTML = document.popup_food.hours.value;
+  // document.getElementById('f3').innerHTML = document.popup_food.minutes.value;
+  // document.getElementById('f4').innerHTML = document.popup_food.tod.value;
+  // document.getElementById('f5').innerHTML = document.popup_food.notification_time.value;
+
+  $(document).ready(function(){
+    $('#submit').click(function(){
+        var databack = $('#myModal #food').val();
+        $('#f1').html(databack);
+    }); 
+  });
+
+  $(document).ready(function(){
+    $('#submit').click(function(){
+        var databack = $('#myModal #hours').val();
+        $('#f2').html(databack);
+    }); 
+  });
+
+  $(document).ready(function(){
+    $('#submit').click(function(){
+        var databack = $('#myModal #minutes').val();
+        $('#f3').html(databack);
+    }); 
+  });
+
+  $(document).ready(function(){
+    $('#submit').click(function(){
+        var databack = $('#myModal #tod').val();
+        $('#f4').html(databack);
+    }); 
+  });
+
+  $(document).ready(function(){
+    $('#submit').click(function(){
+        var databack = $('#myModal #notification_time').val();
+        $('#f5').html(databack);
+    }); 
+  });
+
 }
 
 const WEEKDAYS = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
