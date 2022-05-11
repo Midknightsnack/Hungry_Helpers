@@ -7,11 +7,17 @@ function fetching(calories) {
         setMealData(data)
         const htmlholder = data.meals.map(meals =>{ 
           return `
-          <div class= "meals">
-              <p> Title: ${meals.title}</p>
-              <p> Servings: ${meals.servings}</p>
-              <p> Summary: ${meals.readyInMinutes}</p>
-              <a href=${meals.sourceUrl}>Go to Recipe</a>
+          <div id = "wrapper>
+            <section className="meals">
+              <article>
+              <ul className="instructions">
+                  <h1> ${meals.title}</h1>
+                  <p> Servings: ${meals.servings}</p>
+                  <p> Ready In: ${meals.readyInMinutes} Minutes</p>
+                  <a href=${meals.sourceUrl}>Go to Recipe</a>
+              </ul>
+          </article>
+          </section>
           </div>
           `}).join(" ");
       const htmlhld = data.meals.extendedIngredients

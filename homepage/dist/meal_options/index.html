@@ -2,21 +2,83 @@
 <html lang="en">
   <head>
     <meta charset =  "utf-8" />
-    <title> 5 Recipes</title>
+    <title></title>
     <style>
-        .recipe  {
-            background-color: black;
-            color: white;
-            padding: 1rem;
-            margin-bottom: 1rem;
+      #wrapper {
+        width: 100%;
+        height: 125px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+          #inner {
+      display: table;
+      margin: 0 auto;
         }
+        .fork_image{
+          margin-right: 100px;
+          position: center;
+        }
+        body {
+          font-family: sans-serif;
+          font-weight: 100;
+          background-color: #bcb5ff;
+          }
+        p1 {
+          box-decoration-break: clone;
+          -webkit-box-decoration-break:clone;
+          margin-left: 50px;
+          margin-right: 50px;
+          font-size: 25px;
+          text-align: center;
+          margin-bottom: 20rem;
+          font-family: "Roboto", sans-serif;
+        }
+        h1{
+          margin-bottom: 100px;
+          padding: 150px;
+          text-align: center;
+          display: inline;
+          font-size: 80px;
+          font-weight: 600;
+          color:rgb(35, 19, 107);
+          }
+        button {
+          height: 75px;
+          width:80px;
+          text-align: center;
+          margin-top: 100px;
+          margin-left: 20px;
+          width: 10%;
+          padding: 0.5rem 1rem;
+          background-color: #7f21eb;
+          color: #f3f3f3;
+          border: none;
+          font-family: "Roboto", sans-serif;
+          font-size: 1rem;
+          }
+          button:hover {
+            background-color: #6c13d1;
+            cursor: pointer;
+          }
+          .spoon_image{
+            position: center;
+            }
+
     </style>
   </head>
   <body>
-      <button onclick="fetching();">5 Recipes</button>
-      <div id ="output"></div>
+    <div id = "inner">
+      <img src="../month_images/fork_1.png"style="width:40px;height:110px"/>
+      <h1>Meal Planning Help</h1>
+      <img src="../month_images/spoon.png"style="width:40px;height:110px"/>
+    </div>
+    <div id = "inner">
+      <p1>Sometimes you don't know what you want to eat so we're here to help. Choose one of our three different mealplanners to help you decide. We have our daily meal plan which takes in your daily desired calorie count and gives you a daily meal plan based on it. Secondly, we have our meals by macro planner which takes in your desired calories, fat, carbs, and protein, and gives you a meals that fit those macros. And finally for the moments when you just aren't sure what to eat, we have a random recipe generator for you to use until you find something that looks tasty!   </p1>
+    <div id = "wrapper">
+      <button onclick="window.location.href = '../daily_meal_plan/index.html'"> Daily Meal Plan</button>
+      <button onclick="window.location.href = '../nutrient_meal_plan/index.html'"> Meals by Macros</button>
       <button onclick="window.location.href = '../rngrecipes/index.html'"> Generate 5 Random Recipes</button>
-      <button onclick="window.location.href = '../daily_meal_plan/index.html'"> Plan your meal out by day</button>
-      <button onclick="window.location.href = '../nutrient_meal_plan/index.html'"> Plan meal by desired nutrient count</button>
+    </div>
   </body>
 </html>
