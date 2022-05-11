@@ -65,9 +65,10 @@ document.getElementById("app").innerHTML = `
 
     <div class="modal-body">
       <form name='popup_food' onsubmit="return false">
+        <a href="../meal_options/index.html" class="button" style="text-decoration: none;">Don't know what to eat? Click here!</a> <br>
+        <a href="../map/index.html" class="button" style="text-decoration: none;"> Have an address? Put it in our map!</a>
         <br> <b>Input Meal: </b><br><input type="text" id="food" placeholder="Fish Tacos" value=""> <br>
-        <a href="../meal_options/index.html">Don't know what to eat? Click here!</a> <br>
-        <a href="../map/index.html"> Have an address? Put it in our map!</a>
+
 
         <br><br> <b>Set Meal Time: </b><br> 
         Hour: 
