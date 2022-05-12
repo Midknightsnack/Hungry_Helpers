@@ -65,12 +65,10 @@ document.getElementById("app").innerHTML = `
 
     <div class="modal-body">
       <form name='popup_food' onsubmit="return false">
-        <a href="../meal_options/index.html" class="button" style="text-decoration: none;">Don't know what to eat? Click here!</a> <br>
-        <a href="../map/index.html" class="button" style="text-decoration: none;"> Have an address? Put it in our map!</a>
         <br> <b>Input Meal: </b><br><input type="text" id="food" placeholder="Fish Tacos" value=""> <br>
+        <br> <a href="../meal_options/index.html" class="button" style="text-decoration: none;">Don't know what to eat? Click here!</a>
 
-
-        <br><br> <b>Set Meal Time: </b><br> 
+        <br> <b>Set Meal Time: </b><br> 
         Hour: 
         <select name="hours" id="hours">
           <option value="Hour: 0">0</option>
@@ -127,6 +125,7 @@ document.getElementById("app").innerHTML = `
           <option value="Notification Time: 1 hour before"> 1 hour</option>
         </select> <br> <br>
 
+        <a href="../map/index.html" class="button" style="text-decoration: none;"> Have an address? Click here to pull up our map!</a><br>
         <button type="reset" value="Reset" class="button1">Reset</button>
         <input type="submit" id="submit" class="button2" onclick='check();'>
 
