@@ -43,31 +43,33 @@
     </style>
   </head>
   <body>
+    <p> Note: all entries must be filled for you to receive possible Recipes!</p>
     <div className="App">
       <section className="controls">
-         <input
-           type="number"
-           placeholder="Max Calories"
-           id="calories"
-         />
-         <input
-           type="number"
-           placeholder="Max Carbs"
-           id="carbs"
-         />
-         <input
-           type="number"
-           placeholder="Max Fat"
-           id="fat"
-         />
-         <input
-           type="number"
-           placeholder="Minimum Protein"
-           id="protein"
-         />
+        <input
+        type="number"
+        placeholder="Max Calories"
+        id="calories"
+      />
+      <input
+        type="number"
+        placeholder="Max Carbs"
+        id="carbs"
+      />
+      <input
+        type="number"
+        placeholder="Max Fat"
+        id="fat"
+      />
+      <input
+        type="number"
+        placeholder="Minimum Protein"
+        id="protein"
+      />
          <button onclick="fetching(document.getElementById('calories').value,document.getElementById('carbs').value,document.getElementById('fat').value,document.getElementById('protein').value);">Get Meals by Nutrient Count</button>
        </section>
         </div>
 </body>
 <script type ="text/javascript" src="../nutrient_meal_plan/plan.js"></script>
+<p id = "output"></p>
 </html>
