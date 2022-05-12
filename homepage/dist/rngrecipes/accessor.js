@@ -10,13 +10,12 @@ function fetching() {
         const htmlholder = data.recipes.map(recipe =>{ 
             return `
             <div class= "recipe">
-                <p> Title: ${recipe.title}</p>
+                <h1> ${recipe.title}</h1>
                 <p><img src = "${recipe.image}"/></p>
                 <p> Price Per Serving: $${recipe.pricePerServing}</p>
                 <p> Servings: ${recipe.servings}</p>
                 <p> Summary: ${recipe.summary}</p>
-                <p> Instructions: ${recipe.instructions}</p>
-                <p> URL: ${recipe.sourceUrl}
+                <a href="${recipe.sourceUrl}" class="button">Go to Recipe</a>
             </div>
             `}).join(" ");
         const htmlhld = data.recipes.extendedIngredients

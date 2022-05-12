@@ -16,7 +16,18 @@ li {
   margin: 0;
   list-style: none;
 }
-
+.button {
+  border-radius: 9px;
+  display: block;
+  height: 40px;
+  width: 65%;
+  padding: 0.2rem 0.3rem;
+  background-color: #143191;
+  color: #f3f3f3;
+  border: none;
+  font-family: "Roboto", sans-serif;
+  font-size: 1rem;
+}
 /* Color of the day cell borders */
 .month {
   position: relative;
