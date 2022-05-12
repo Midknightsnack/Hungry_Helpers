@@ -2,11 +2,14 @@
 <html lang="en">
   <head>
     <meta charset =  "utf-8" />
+    <link href="https://fonts.googleapis.com/css?family=Orelega+One&display=swap" rel="stylesheet" />
+    
     <title></title>
     <style>
       #wrapper {
         width: 100%;
         height: 125px;
+        padding: 40px;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -14,15 +17,21 @@
           #inner {
       display: table;
       margin: 0 auto;
+      padding: 50px;
         }
+        #inner text {
+          display: table;
+          margin: 0 auto;
+          padding: 50px;
+            }
         .fork_image{
           margin-right: 100px;
           position: center;
         }
         body {
-          font-family: sans-serif;
           font-weight: 100;
           background-color: #bcb5ff;
+          font-family: Orelega One;
           }
         p1 {
           box-decoration-break: clone;
@@ -32,7 +41,7 @@
           font-size: 25px;
           text-align: center;
           margin-bottom: 20rem;
-          font-family: "Roboto", sans-serif;
+          font-family: Orelega One;
         }
         h1{
           margin-bottom: 100px;
@@ -44,8 +53,8 @@
           color:rgb(35, 19, 107);
           }
         button {
-          height: 75px;
-          width:80px;
+          height: 85px;
+          width: 90px;
           text-align: center;
           margin-top: 100px;
           margin-left: 20px;
@@ -53,9 +62,20 @@
           padding: 0.5rem 1rem;
           background-color: #7f21eb;
           color: #f3f3f3;
-          border: none;
-          font-family: "Roboto", sans-serif;
-          font-size: 1rem;
+          font-family: Orelega One;
+          font-size: 22px;
+          border: 2px solid #ffffff;
+          border-radius: 30px;
+          box-shadow: #9c9b9b 4px 4px 0 0;
+          color: #ffffff;
+          cursor: pointer;
+          display: inline-block;
+          touch-action: manipulation;
+          
+          }
+          button:active {
+            box-shadow: #422800 2px 2px 0 0;
+            transform: translate(2px, 2px);
           }
           button:hover {
             background-color: #6c13d1;
@@ -73,7 +93,7 @@
       <h1>Meal Planning Help</h1>
       <img src="../month_images/spoon.png"style="width:40px;height:110px"/>
     </div>
-    <div id = "inner">
+    <div id = "inner text">
       <p1>Sometimes you don't know what you want to eat so we're here to help. Choose one of our three different mealplanners to help you decide. We have our daily meal plan which takes in your daily desired calorie count and gives you a daily meal plan based on it. Secondly, we have our meals by macro planner which takes in your desired calories, fat, carbs, and protein, and gives you a meals that fit those macros. And finally for the moments when you just aren't sure what to eat, we have a random recipe generator for you to use until you find something that looks tasty!   </p1>
     <div id = "wrapper">
       <button onclick="window.location.href = '../daily_meal_plan/index.html'"> Daily Meal Plan</button>
