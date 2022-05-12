@@ -19,11 +19,11 @@ function fetchdeeper(data)
 return`
       <div class="Recipe">
         <ul>
-          <li>Title: ${data.title}</li>
-          <li>Total Calories: ${data.calories}</li>
-          <li>Total Carbohydrates: ${data.carbs}</li>
-          <li>Total Fat: ${data.fat}</li>
-          <li>Total Protein: ${data.protein}</li>
+          <h1>${data.title}</h1>
+          <p>Total Calories: ${data.calories}</p>
+          <p>Total Carbohydrates: ${data.carbs}</p>
+          <p>Total Fat: ${data.fat}</li>
+          <p>Total Protein: ${data.protein}</p>
           <img src = "${data.image}"/> 
           <br>
         </ul>

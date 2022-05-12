@@ -12,10 +12,9 @@ function fetching() {
             <div class= "recipe">
                 <h1> ${recipe.title}</h1>
                 <p><img src = "${recipe.image}"/></p>
-                <p> Price Per Serving: $${recipe.pricePerServing}</p>
                 <p> Servings: ${recipe.servings}</p>
                 <p> Summary: ${recipe.summary}</p>
-                <a href="${recipe.sourceUrl}" class="button">Go to Recipe</a>
+                <a href="${recipe.sourceUrl}" class="button" style="text-decoration: none;">Go to Recipe</a>
             </div>
             `}).join(" ");
         const htmlhld = data.recipes.extendedIngredients

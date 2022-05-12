@@ -37,9 +37,10 @@ nav ul {
     top: 64px;
 }
 
-html, body {
+html,
+body {
     display: grid;
-    height: 1252px;
+    height: 884px;
     width: 100%;
     box-sizing: border-box;
     place-items: center;
@@ -56,7 +57,7 @@ html, body {
 
 .header-container {
     position: relative;
-    top: -290px;
+    top: -291px;
     padding: 50px;
     text-align: center;
     color: #492777;

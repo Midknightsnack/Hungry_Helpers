@@ -6,12 +6,26 @@
 
     <title> 5 Recipes</title>
     <style>
+        .button {
+          display: block;
+          margin : 0 auto;
+          height: 20px;
+          width: 50px;
+          width: 10%;
+          padding: 0.5rem 1rem;
+          background-color: #7f21eb;
+          color: #f3f3f3;
+          border: none;
+          font-family: "Roboto", sans-serif;
+          font-size: 1rem;
+          margin-bottom: 0rem;
+        }
         body {
           font-family: sans-serif;
           font-weight: 100;
           background-color: #bcb5ff;
           }
-          #wrapper {
+          /* #wrapper {
             display: flex;
             align-items: center;
             justify-content: center;
@@ -20,15 +34,15 @@
             display: flex;
             align-items: center;
             justify-content: center;
-          }
+            margin: 0 auto;
+          } */
           button {
             height: 85px;
             width: 90px;
             text-align: center;
-            margin-top: 100px;
-            margin-left: 20px;
+            margin-bottom: 30px;
             width: 10%;
-            padding: 0.5rem 1rem;
+            padding: 0.0rem 1rem;
             background-color: #7f21eb;
             color: #f3f3f3;
             font-family: Orelega One;
@@ -38,9 +52,12 @@
             box-shadow: #9c9b9b 4px 4px 0 0;
             color: #ffffff;
             cursor: pointer;
-            display: inline-block;
             touch-action: manipulation;
-            
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin : 0 auto;
+            margin-bottom: 30px;
             }
             button:active {
               box-shadow: #422800 2px 2px 0 0;
@@ -65,9 +82,10 @@
   <body>
     <div id = "wrapper">
       <button onclick="fetching();">5 Recipes</button>
-      <div id ="output"></div>
+      <div id ="output"> </div>
       <button onclick="window.location.href = '../Website/login.html'"> Return to Login Page</button>
       <button onclick="window.location.href = '../calendar/calendar.html'"> Connect to Calendar</button>
+    </div>
   </body>
   <script src="accessor.js"></script>
 </html>

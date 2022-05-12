@@ -11,7 +11,7 @@ function fetching(calories) {
               <h1> ${meals.title}</h1>
               <p> Servings: ${meals.servings}</p> 
               <p> Ready In: ${meals.readyInMinutes} Minutes</p>
-              <a href="${meals.sourceUrl}" class="button">Go to Recipe</a>
+              <a href="${meals.sourceUrl}" class="button" style="text-decoration: none;">Go to Recipe</a>
           </div>
           `}).join(" ");
       const htmlhld = data.meals.extendedIngredients
@@ -25,7 +25,7 @@ function setMealData(data)
 {
     return`
         <div class="nutrients">
-          <h1>Macros</h1>
+          <h2>Macros</h2>
           <ul>
             <li>Total Calories: ${data.nutrients.calories}</li>
             <li>Total Carbohydrates: ${data.nutrients.carbohydrates}</li>

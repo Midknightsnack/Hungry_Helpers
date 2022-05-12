@@ -16,12 +16,11 @@ li {
   margin: 0;
   list-style: none;
 }
-
 .button {
   border-radius: 9px;
   display: block;
   height: 40px;
-  width: 75%;
+  width: 65%;
   padding: 0.2rem 0.3rem;
   background-color: #143191;
   color: #f3f3f3;
@@ -29,7 +28,6 @@ li {
   font-family: "Roboto", sans-serif;
   font-size: 1rem;
 }
-
 /* Color of the day cell borders */
 .month {
   position: relative;
@@ -181,7 +179,6 @@ li {
 
 /*reset button*/
 .button1{
-  cursor: pointer;
   display:inline-block;
   padding:0.3em 1.2em;
   margin:0 0.3em 0.3em 0;
@@ -196,7 +193,6 @@ li {
 
 /*reset button*/
 .button2{
-  cursor: pointer;
   display:inline-block;
   padding:0.3em 1.2em;
   margin:0 0.3em 0.3em 0;
@@ -230,7 +226,7 @@ li {
   color: white;
 }
 
-.modal-body {padding: 2px 24px;}
+.modal-body {padding: 2px 16px;}
 
 /* Meal Display */
 .meal-display{
