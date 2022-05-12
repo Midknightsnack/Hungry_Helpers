@@ -4,21 +4,20 @@ function fetching(calories) {
         .then(response => response.json())
       .then(data => {
         console.log(data);
-        setMealData(data);
+        const htmlholder2 = setMealData(data);
         const htmlholder = data.meals.map(meals =>{ 
           return `
             <div class = "meals">
               <h1> ${meals.title}</h1>
               <p> Servings: ${meals.servings}</p> 
-              <p> Carbohydrates: ${data.nutrients.carbohydrates}</p>
-              <p> Fats: ${data.nutrients.fat}</p>
-              <p> Protein: ${data.nutrients.protein}</p>
               <p> Ready In: ${meals.readyInMinutes} Minutes</p>
               <a href="${meals.sourceUrl}" class="button">Go to Recipe</a>
           </div>
           `}).join(" ");
       const htmlhld = data.meals.extendedIngredients
       console.log(htmlholder)
+      console.log(htmlholder2)
+      document.querySelector('#output').insertAdjacentHTML('beforebegin',htmlholder2);
       document.querySelector('#output').insertAdjacentHTML('afterbegin',htmlholder);})
 }
 
@@ -28,10 +27,10 @@ function setMealData(data)
         <div class="nutrients">
           <h1>Macros</h1>
           <ul>
-            <li>Calories: ${data.title}</li>
-            <li>Carbohydrates: ${data.nutrients.carbohydrates}</li>
-            <li>Fat: ${data.nutrients.fat}</li>
-            <li>Protein: ${data.nutrients.protein}</li>
+            <li>Total Calories: ${data.nutrients.calories}</li>
+            <li>Total Carbohydrates: ${data.nutrients.carbohydrates}</li>
+            <li>Total Fat: ${data.nutrients.fat}</li>
+            <li>Total Protein: ${data.nutrients.protein}</li>
           </ul>
         </div>`;
 
