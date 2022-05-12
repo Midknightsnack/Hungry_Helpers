@@ -4,12 +4,15 @@ function fetching(calories) {
         .then(response => response.json())
       .then(data => {
         console.log(data);
-        setMealData(data)
+        setMealData(data);
         const htmlholder = data.meals.map(meals =>{ 
           return `
             <div class = "meals">
               <h1> ${meals.title}</h1>
               <p> Servings: ${meals.servings}</p> 
+              <p> Carbohydrates: ${data.nutrients.carbohydrates}</p>
+              <p> Fats: ${data.nutrients.fat}</p>
+              <p> Protein: ${data.nutrients.protein}</p>
               <p> Ready In: ${meals.readyInMinutes} Minutes</p>
               <a href="${meals.sourceUrl}" class="button">Go to Recipe</a>
           </div>
@@ -17,7 +20,6 @@ function fetching(calories) {
       const htmlhld = data.meals.extendedIngredients
       console.log(htmlholder)
       document.querySelector('#output').insertAdjacentHTML('afterbegin',htmlholder);})
-      
 }
 
 function setMealData(data)
