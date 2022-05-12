@@ -181,6 +181,7 @@ li {
 
 /*reset button*/
 .button1{
+  cursor: pointer;
   display:inline-block;
   padding:0.3em 1.2em;
   margin:0 0.3em 0.3em 0;
@@ -195,6 +196,7 @@ li {
 
 /*reset button*/
 .button2{
+  cursor: pointer;
   display:inline-block;
   padding:0.3em 1.2em;
   margin:0 0.3em 0.3em 0;
