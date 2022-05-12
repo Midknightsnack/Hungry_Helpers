@@ -1,21 +1,33 @@
-function fetching(calories, carbs, fat, protein) {
-    fetch('https://api.spoonacular.com/recipes/findByNutrients?&apiKey=de559a9360ca444db609c4915be035ca&maxCalories='+calories+'&minProtein='+protein+'&maxCarbs='+carbs+'&maxFat='+fat+'&number=5')
-    .then(response => response.json())
-      .then(data => {
-        console.log(data.insertAdjacentHTML);
-        console.log(data.length)
-        const htmlholder = data.length.map(data =>{ 
-          return `
-          <div class= "data">
-              <p> Calories: ${data.calories}</p>
-              <p> Carbs: ${data.carbs}</p>
-              <p> Fat: ${data.fat}</p>
-              <p> Protein:${data.protein}>/p>
-          </div>
-          `}).join(" ");
-      console.log(htmlholder)
-      document.querySelector('#output').insertAdjacentHTML('afterbegin',htmlholder);})
-      
+function fetching(calories,carbs,fat,protein) {
+  fetch('https://api.spoonacular.com/recipes/findByNutrients?maxCalories='+calories+'&maxFat='+fat+'&maxCarbs='+carbs+'&minProtein='+protein+'&random=True'+'&number=5'+'&apiKey=de559a9360ca444db609c4915be035ca&')
+  .then(response => response.json())
+    .then(data => {
+      console.log(data)
+      fetchloop(data,data.length)
+      })
+    
+}
+function fetchloop(data,datalength)
+{
+for(let i = 0; i < datalength; i++)
+{
+  document.getElementById("output").innerHTML += fetchdeeper(data[i])
+}
+}
+function fetchdeeper(data)
+{
+return`
+      <div class="Recipe">
+        <ul>
+          <li>Title: ${data.title}</li>
+          <li>Total Calories: ${data.calories}</li>
+          <li>Total Carbohydrates: ${data.carbs}</li>
+          <li>Total Fat: ${data.fat}</li>
+          <li>Total Protein: ${data.protein}</li>
+          <img src = "${data.image}"/> 
+          <br>
+        </ul>
+      </div>`;
 }
 
 
