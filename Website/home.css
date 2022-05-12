@@ -1,0 +1,83 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Orelega One;
+  }
+  
+/* Navigation */
+nav ul {
+    display: flex;
+}
+
+.logo {
+    position: absolute;
+    top: 20px;
+}
+
+.nav-items li {
+    list-style: none;
+    margin-right: 100px;
+}
+
+.nav-items li:nth-last-of-type(1) {
+    margin: 0;
+}
+
+.nav-items li a {
+    color: #492777;
+    font-size: 25px;
+    font-family: "Orelega One";
+    text-decoration: none;
+}
+
+.nav-button-container {
+    position: absolute;
+    left: 750%;
+    top: 64px;    
+}
+
+html, body {
+    display: grid;
+    height: 770px;  /* might have issues with consistency */
+    width: 100%;
+    box-sizing: border-box;
+    place-items: center;
+    background: #F9ECDF;
+}
+
+.wrapper {
+  overflow: hidden;
+  background: #ffffff;
+  padding: 30px;
+  border-radius: 5px;
+  box-shadow: 0px 15px 20px rgba(0,0,0,0.1);
+}
+
+
+.header-container {
+    padding: 50px;
+    text-align: center;
+    color: #492777;
+}
+
+.search {
+	position: absolute;
+    top: 400px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #ffffff;
+    max-width: 600px;
+    width: 100%;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    border-radius: 5px;
+    box-shadow: 0px 15px 20px rgba(0,0,0,0.1);
+}
+
+.search .input {
+    width: 88%;
+    padding: 10px 20px;
+    border: none;
+}
