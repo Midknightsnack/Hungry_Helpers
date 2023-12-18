@@ -10,7 +10,7 @@ Lisa Hong - lisa-hong@csu.fullerton.edu
 
 Diane Le - dianeletrinh@csu.fullerton.edu
 
-Parker Stephenson - parkerstephenson@csu.fullerton.edu
+Parker Stephenson - parkerstephenson00@gmail.com
 
 Michael Trinh - michaeltrinh@csu.fullerton.edu
 
